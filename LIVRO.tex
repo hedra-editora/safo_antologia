@@ -1,9 +1,9 @@
-\documentclass[semcabeco,showtrims,12pt,conselho,spreadimages]{memoir}
+\documentclass[showtrims,trimframe,12pt,conselho,spreadimages]{memoir}
 
 \usepackage[largepost]{hedraoptions} %% << %%%%%%%%%%%%%%%%
 \usepackage[baruch]{hedrastyles}
 \usepackage[xetex,chicagofootnotes]{tipografia}
-\usepackage[standart,sempontinhos]{toc}
+\usepackage[standart,compontinhos]{toc}
 \usepackage{hedraextra}
 \usepackage{penalidades}
 \usepackage{graficos}
@@ -72,8 +72,17 @@
 \usepackage{fontspec}
 
 %\usepackage{Formular}
+\newcommand{\slsc}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-LightItalic}\textsc{#1}\fontspec[]{Formular-LightItalic}}
+
+\newcommand{\bold}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-BoldItalic}\textsc{#1}\fontspec[]{Formular-BoldItalic}}
+
+\newcommand{\italic}[1]{\fontspec[SmallCapsFeatures={FakeSlant=0.6}]{Formular-Italic}\textsc{#1}\fontspec[]{Formular-Italic}}
+
+
+%\usepackage{Formular}
 \newfontfamily\Formular{Formular-Regular}[
-BoldFont = Formular-Bold.otf]	
+BoldFont = Formular-Bold.otf,
+ItalicFont = Formular-Light.otf]
 
 %--------------------------------------------ALTERAR DISTÃNCIA ENTRE TÍTULO DO SUMÁRIO E CAPÍTULOS
 %\addtocontents{toc}{\vskip-15pt}
@@ -97,7 +106,7 @@ BoldFont = Formular-Bold.otf]
 %\renewcommand\indexname{Índice onomástico}
 %\makeindex[intoc]
 
-\setcounter{tocdepth}{0}
+\setcounter{tocdepth}{4}
 \setcounter{secnumdepth}{-2} 
 %\linespread{1.08}
 \usepackage{commands}

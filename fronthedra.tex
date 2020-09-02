@@ -3,7 +3,7 @@
 {\Formular{\Huge{\titulagemfront{}}}}
 \vspace{11.25mm}
 
-\LARGE{\autor}
+{\Formular\LARGE{\autor}}
 \vfill
 \clearpage
 
@@ -22,12 +22,13 @@
 \linha{indicação}{\indicacao}\smallskip
 \linha{edição}{\edicao}
 \linha{coedição}{\coedicao}
-\linha{assistência editorial}{\assistencia}
+\linhalayout{editor-assistente}{Paulo Henrique Pompermaier}
+%\linha{assistência editorial}{\assistencia}
 \linha{revisão}{\revisao}
 \linha{preparação}{\preparacao}
 \linha{iconografia}{\iconografia}
-\linhalayout{projeto da coleção}{Lucas Kröeff}
-\linha{capa}{\capa}
+\linhalayout{capa e projeto gráfico}{Lucas Kröeff}
+%\linha{capa}{\capa}
 \linha{imagem da capa}{\imagemcapa}\smallskip
 \linha{ISBN}{\ISBN}\smallskip
 \begingroup\tiny
@@ -57,17 +58,17 @@ Foi feito o depósito legal.\\\endgroup
 {\Formular{\Huge{\titulagem}}}
 \vspace{11.25mm}
 
-{\LARGE{\autor} \par}%\vspace{1.5ex}}
-\vspace{6cm} %9.3cm
-\ifdef{\organizador}{{\small {\organizador} (\textit{organização} e \textit{tradução})} \par}{}
+{\Formular\LARGE{\autor} \par}%\vspace{1.5ex}}
+\vspace{5cm} %9.3cm
+\ifdef{\organizador}{{\Formular\small {\organizador}\\ ({\italic{organização}} e {\italic{tradução}})} \par}{}
 \ifdef{\introdutor}{{\small {\introdutor} (\textit{prefácio})} \par}{}\vspace{8.5mm}
 %\ifdef{\tradutor}{{\small {\tradutor} (\textit{tradução})}\par}{}
 
-{{\footnotesize{} \ifdef{\numeroedicao}{\numeroedicao}{2}ª edição} \par}
+{{\Formular\footnotesize{} \ifdef{\numeroedicao}{\numeroedicao}{2}ª edição revista e ampliada} \par}
 %logos
 \vfill
 \normalsize
-%\ifdef{\logo}{\IfFileExists{\logo}{\hfill\includegraphics[width=3cm]{\logo}\hfill\logoum{}\\ São Paulo\_\the\year}}{\logoum\break{} São Paulo\_\the\year}
+\ifdef{\logo}{\IfFileExists{\logo}{\hfill\includegraphics[width=3cm]{\logo}\hfill\logoum{}\\ São Paulo\_\the\year}}{\logoum\break{} São Paulo\quad\the\year}
 %\includegraphics[width=.4\textwidth,trim=0 0 25 0]{logo.jpg}\\\smallskip
 \par\clearpage\endgroup
 % Resumo -------------------------------------------------------
