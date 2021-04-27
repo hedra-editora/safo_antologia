@@ -53,9 +53,9 @@
 \RequirePackage{shorttoc}
 \newcommand{\hedrashorttoc}{
 \ifodd\thepage\clearpage\else\paginabranca\fi
-\def\contentsname{índice}
-\addcontentsline{toc}{chapter}{Índice}
-\tableofcontents}
+\def\contentsname{Índice}
+%\addcontentsline{toc}{chapter}{Índice}
+\setcounter{tocdepth}{4}\tableofcontents}
 
 
 
