@@ -17,6 +17,23 @@
 
 
 
+\makeatletter
+\newenvironment{gkverse}
+    {\let\\=\@centercr
+    \vspace{.5\onelineskip}
+    \selectfont\Porson
+    \list{}{\itemsep \z@
+    \newskip\verseinstanzaparskip
+    \itemindent -1.5em%
+    \listparindent\itemindent
+    \rightmargin \leftmargin
+    \advance\leftmargin .5em}%
+    \item[]}
+    {\endlist}
+\makeatother
+  
+
+
 %Pequeno resumo abaixo dos itens do sumário
 
 \makeatletter
@@ -70,7 +87,6 @@
 
 \newcommand{\forceindent}{\leavevmode{\parindent=1,4em\indent}}
 
-\linespread{1.08}
 
 \usepackage{endnotes}
 \renewcommand{\notesname}{Notas}
@@ -81,8 +97,6 @@
 \usepackage{makeidx,hedraindex}  % cria índice
 \makeindex	
 
-%\counterwithin*{endnote}{part}
-%\counterwithin*{endnote}{chapter}
 
 \let\latexchapter\chapter
 \makeatletter
@@ -93,47 +107,20 @@
   \let\@afterindentfalse\@afterindenttrue
 }
 \makeatother
-%\usepackage{fancyhdr}
-%\pagestyle{fancy}
-%\setlength{\headheight}{9mm}
-%\fancyhf{}
-%\fancyhead[R]{\thepage}
-%\renewcommand{\headrulewidth}{0pt}
-
-%\lhead[\fancyplain{}]{}
-%\chead[\fancyplain{}]{}
-%\rhead[\fancyplain{}]{\cnvt{\thepage} -- \thepage}
-
-%\newcommand*{\cnvt}[1]{\the\numexpr#1-1\relax}
-
-%\fancypagestyle{chapter}{
-%\pagestyle{fancy}
-%\setlength{\headheight}{5mm}
-%\fancyhf{}
-%\fancyhead[R]{\thepage}
-%\renewcommand{\headrulewidth}{0pt}}
-
 
 \usepackage{footmisc}
 
 \renewcommand*\footnoterule{}
-%\fancyhf[RO]{\cnvt{\thepage} -- \thepage}
-%\fancyfoot{}
-%\renewcommand{\headrulewidth}{0pt}
-%\renewcommand{\footrulewidth}{0pt}}
 
 \usepackage{fontspec}
 
-%\usepackage{Formular}
+%\newfontfamily\Libertine{}
 \newfontfamily\Formular{Formular-Regular}[
 BoldFont = Formular-Bold.otf,
 ItalicFont = Formular-Italic.otf]
 
 \newfontfamily\Porson{porson.ttf}
 
-%--------------------------------------------ALTERAR DISTÃNCIA ENTRE TÍTULO DO SUMÁRIO E CAPÍTULOS
-%\addtocontents{toc}{\vskip-15pt}
-%--------------------------------------------
 \usepackage{afterpage}
 
 \newcommand\blankpage{%
@@ -144,76 +131,13 @@ ItalicFont = Formular-Italic.otf]
 
     
 
-%\usepackage{imakeidx} 
-%\makeindex[program=xindy, options=-C utf8 -L portuguese]
-%\newcommand\gobbleone[1]{}
-%\newcommand*{\seeonly}[2]{\ (\emph{\seename} #1)}
-%\newcommand*{\also}[2]{\emph{cf.} #1}
-%\newcommand{\Also}[2]{\emph{See also} #1}
-%\renewcommand\indexname{Índice onomástico}
-%\makeindex[intoc]
-
 \setcounter{tocdepth}{0}
 \setcounter{secnumdepth}{-2} 
-%\linespread{1.08}
 \usepackage{commands}
 
 \usepackage{setspace}
 
-\makeatletter
-\newenvironment{Parskip}{%
-   \par
-   \parskip=0.3\baselineskip \advance\parskip by 0pt plus 2pt
-   \parindent=\z@
-   \def\@listI{\leftmargin\leftmargini
-      \topsep\z@ \parsep\parskip \itemsep\z@}
-   \let\@listi\@listI
-   \@listi
-   \def\@listii{\leftmargin\leftmarginii
-      \labelwidth\leftmarginii\advance\labelwidth-\labelsep
-      \topsep\z@ \parsep\parskip \itemsep\z@}
-   \def\@listiii{\leftmargin\leftmarginiii
-       \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
-       \topsep\z@ \parsep\parskip \itemsep\z@}
-   \partopsep=\z@
-}{\par}
-\makeatother
-
-\makeatletter
-\newenvironment{myParskip}{%
-   \par
-   \parskip=0.2\baselineskip \advance\parskip by 0pt plus 2pt
-   \parindent=\z@
-   \def\@listI{\leftmargin\leftmargini
-      \topsep\z@ \parsep\parskip \itemsep\z@}
-   \let\@listi\@listI
-   \@listi
-   \def\@listii{\leftmargin\leftmarginii
-      \labelwidth\leftmarginii\advance\labelwidth-\labelsep
-      \topsep\z@ \parsep\parskip \itemsep\z@}
-   \def\@listiii{\leftmargin\leftmarginiii
-       \labelwidth\leftmarginiii\advance\labelwidth-\labelsep
-       \topsep\z@ \parsep\parskip \itemsep\z@}
-   \partopsep=\z@
-}{\par}
-\makeatother
-
 \newcommand{\mystar}{{\fontfamily{lmr}\selectfont$\star$}}
-
-%\makeatletter
-%\renewcommand{\@chapapp}{}% Not necessary...
-%\newenvironment{chapquote}[2][2em]
-%  {\setlength{\@tempdima}{#1}%
-%   \def\chapquote@author{#2}%
-%   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
-%   \itshape}
-%  {\par\scriptsize\hfill-- \chapquote@author\hspace*{\@tempdima}\par\bigskip}
-%\makeatother
-
-%\newcommand\Chapter[2]{\chapter
-%  [#1\hfil\hbox{}\protect\linebreak{\itshape#1}]%
-%  {#1\\[2ex]\Large\itshape#2}%
-%}
 
 \begin{document}
 
