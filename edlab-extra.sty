@@ -184,7 +184,15 @@
 
 \newcommand\starr{\textsuperscript{\tiny $\ast$}}
 
-% Numeração ao lado dos versos
 
-\setlength{\marginparwidth}{2em}
-\newcommand{\num}[1]{\marginpar{\scriptsize#1}}
+% "hedratoc" para ser usado com o shorttoc
+\RequirePackage{shorttoc}
+\newcommand{\hedrashorttoc}{
+\ifodd\thepage\clearpage\else\paginabranca\fi
+\def\contentsname{Índice}
+%\addcontentsline{toc}{chapter}{Índice}
+\setcounter{tocdepth}{3}\tableofcontents}
+
+% Aumentar a mancha da página
+
+\newcommand*\EP[1][-1]{\enlargethispage*{#1\baselineskip}}
