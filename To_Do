@@ -9,12 +9,14 @@ indentações nos verses OK
 repassar textsc na intro OK
 remover espaço antes de 'Nos fragmentos de Safo, o leitor decerto. OK
 Substituir ~ por \, OK
+ajustar comando de numeração manual OK
+Checar footnotes e textls OK
 Kerning OK
 
 
 Inserir ficha
-Checar footnotes e textls
-footnotes q nao ficam ao fim da pag "Esse nome talvez esteja presente"; "Veremos sobretudo no"
+
+footnotes q nao ficam ao fim da pag "Esse nome talvez esteja presente"; "Veremos sobretudo no" 
 versos numerados na intro? "Sim, tremo quando ele ataca,"
 \textbf{a}, \textbf{b} deixar em bold?
 ____________________________
