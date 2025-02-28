@@ -12,11 +12,15 @@ Substituir ~ por \, OK
 ajustar comando de numeração manual OK
 Checar footnotes e textls OK
 Kerning OK
+Remover o pacote gmverse OK
 
 
+
+Lidar com as consequências de remover o gmverse
 Inserir ficha
+\ldots{} deletar espaços antes
 
-footnotes q nao ficam ao fim da pag "Esse nome talvez esteja presente"; "Veremos sobretudo no" 
+footnotes q nao ficam ao fim da pag  "Veremos sobretudo no" 
 versos numerados na intro? "Sim, tremo quando ele ataca,"
 \textbf{a}, \textbf{b} deixar em bold?
 ____________________________
