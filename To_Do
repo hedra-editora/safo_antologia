@@ -1,26 +1,27 @@
 To_Do:
 
 
-Tirar conselho editorial OK
-checar travessões do TEXTO.tex OK
-tirar espaço fino das aspas francesas OK
-atualizar publicidade OK
-indentações nos verses OK
-repassar textsc na intro OK
-remover espaço antes de 'Nos fragmentos de Safo, o leitor decerto. OK
-Substituir ~ por \, OK
-ajustar comando de numeração manual OK
-Checar footnotes e textls OK
-Kerning OK
-Remover o pacote gmverse OK
-versos numerados na intro? Se for para manter, ajustar distância OK
+FEITO:
+
+Tirar conselho editorial 
+checar travessões do TEXTO.tex 
+tirar espaço fino das aspas francesas 
+atualizar publicidade 
+indentações nos verses 
+repassar textsc na intro 
+remover espaço antes de 'Nos fragmentos de Safo, o leitor decerto. 
+Substituir ~ por \, 
+Ajustar distância do comando de numeração manual 
+Checar footnotes e textls 
+Kerning 
+Remover o pacote gmverse 
+Lidar com as consequências de remover o gmverse 
 
 
 
-Lidar com as consequências de remover o gmverse
+FAZER: 
+
 Inserir ficha
-\ldots{} deletar espaços antes e depois
-
 footnotes q nao ficam ao fim da pag  "Veremos sobretudo no" 
 \textbf{a}, \textbf{b} deixar em bold?
 ____________________________
