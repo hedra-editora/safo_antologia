@@ -198,3 +198,19 @@
 
 \newcommand{\asterisc}{\begin{center}\adforn{47}\end{center}}
 
+
+
+
+\newenvironment{argumento}{%
+  \clearpage
+  \checkoddpage
+  \ifoddpage
+    \hbox{}\newpage % força uma página em branco se estiver em página ímpar
+  \fi
+  \thispagestyle{empty}%
+  \mbox{}\vfill%
+  \parindent0pt%
+  \footnotesize\textbf{Nota introdutória}\itshape\quad%
+}{%
+  \thispagestyle{empty}\par
+}
